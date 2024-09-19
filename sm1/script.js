@@ -13,3 +13,5 @@ console.log(`${x} * ${y} = ${x * y}`);
 console.log(`${x} / ${y} = ${x / y}`);
 
 console.log(x * text);
+
+console.log(text.repeat(x));
