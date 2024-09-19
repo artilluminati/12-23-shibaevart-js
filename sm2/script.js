@@ -4,10 +4,14 @@ let name = prompt("Как тебя зовут?");
 
 let age = prompt("Сколько тебе лет?");
 
-alert(age < 20 ? "Тебе меньше 20" : "Привет".repeat(5));
+if (age < 20) {
+    alert("Тебе меньше 20");
+} else {
+    for (let i = 0; i < 5; i++) {
+        alert("Привет");
+    }
+}
 
 let isLearningJs = confirm("Хочешь учить JS?");
 
-if (isLearningJs) {
-    alert("Супер!");
-}
+isLearningJs ? alert("Супер!") : null;
