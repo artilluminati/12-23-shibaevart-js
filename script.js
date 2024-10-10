@@ -1,6 +1,6 @@
 "use strict";
 // Количество проектов на данный момент
-const NUM_LINKS = 2;
+const NUM_LINKS = 5;
 
 // Функция для генерации ссылок
 function generateLinks(start, end) {
