@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./public/css/style.css" />
+        <title>fetch()| onsubmit | async/await</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <form id="productForm" method="post">
+                <h2>Создать продукт</h2>
+                <div class="input_container">
+                    <label>Название</label>
+                    <input type="text" name="title" placeholder="Название" />
+                </div>
+                <div class="input_container">
+                    <label>Цена</label>
+                    <input type="text" name="price" placeholder="Цена" />
+                </div>
+                <div class="input_container">
+                    <label>Описание</label>
+                    <input
+                        type="text"
+                        name="description"
+                        placeholder="Описание"
+                    />
+                </div>
+                <button type="submit">Создать продукт</button>
+            </form>
+        </div>
+        <script>
+            "use strict";
+
+            const productForm = document.querySelector("#productForm");
+
+            productForm.onsubmit = async (event) => {
+                event.preventDefault();
+
+                let response;
+
+                try {
+                    const call = await fetch(
+                        "https://fakestoreapi.com/products",
+                        {
+                            method: "POST",
+                            body: JSON.stringify({
+                                title: productForm.title.value,
+                                price: productForm.price.value,
+                                description: productForm.description.value,
+                                image: "https://i.pravatar.cc",
+                                category: "electronic",
+                            }),
+                        }
+                    );
+                    response = await call.json();
+
+                } catch (error) {
+                    alert("Ошибка при отправке данных");
+                    return;
+                }
+
+                console.log(await response);
+            };
+        </script>
+    </body>
+</html>
