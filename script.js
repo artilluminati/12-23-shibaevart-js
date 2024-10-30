@@ -50,7 +50,7 @@ function generateLinks(rootFolders) {
 }
 
 // Пример корневых папок и их подпапок
-const rootFolders = [{ subfolderCount: 5 }, { subfolderCount: 1 }];
+const rootFolders = [{ subfolderCount: 5 }, { subfolderCount: 2 }];
 
 // Генерируем ссылки при загрузке страницы
 window.onload = () => generateLinks(rootFolders);
