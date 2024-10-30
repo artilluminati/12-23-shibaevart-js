@@ -1,0 +1,27 @@
+.accordion__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion__content {
+    display: none;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+.accordion__item.open > .accordion__content {
+    display: flex;
+    opacity: 1;
+    height: 100%;
+}
+.accordion__content {
+    flex-direction: column;
+    gap: 10px;
+}

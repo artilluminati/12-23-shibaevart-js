@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Horse Social Network</title>
+        <link rel="stylesheet" href="public/css/index.css" />
+        <script src="./public/js/index.js" defer></script>
+    </head>
+    <body>
+        <div class="burger">
+            <div class="container-full burger__content">
+                <ul class="burger__nav-list">
+                    <li><a href="#">Main page</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="users">
+            <div class="container-full">
+                <aside
+                    class="panel"
+                    onmouseenter="openPanel()"
+                    onmouseleave="closePanel()"
+                >
+                    <h1 class="panel__logotype">
+                        <img src="public/images/HorseConnectLogo.png" alt="" />
+                    </h1>
+                    <ul class="panel__nav-list">
+                        <li>
+                            <button class="light">
+                                <img
+                                    src="./public/images/icons/person.svg"
+                                    alt="person"
+                                />
+                                <p>Personal data</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="light">
+                                <img
+                                    src="./public/images/icons/settings.svg"
+                                    alt="settings"
+                                />
+                                <p>Settings</p>
+                            </button>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="container users__content">
+                    <header class="container-full users__container">
+                        <h1>Users</h1>
+                        <button
+                            class="icon light"
+                            onclick="triggerBurger(event)"
+                        >
+                            <img
+                                src="public/images/icons/menu.svg"
+                                alt="icon"
+                            />
+                        </button>
+                    </header>
+                    <main class="users__main">
+                        <div class="users__container">
+                            <h2>Top of users</h2>
+                            <div
+                                class="users__item accordion__item"
+                                onclick="toggleAccordion(event)"
+                            >
+                                <div class="accordion__heading">
+                                    <div class="users__info">
+                                        <div class="avatar">
+                                            <img
+                                                src="https://stihi.ru/pics/2020/01/20/3917.jpg"
+                                                alt="Bucephalus"
+                                                class="avatar_inner"
+                                            />
+                                        </div>
+                                        <div>
+                                            <h3>Bucephalus</h3>
+                                            <p id="user-age">30</p>
+                                        </div>
+                                    </div>
+                                    <div class="users__expand">
+                                        <img
+                                            src="public/images/icons/arrow_down.svg"
+                                            alt="expand"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="accordion__content">
+                                    <p>
+                                        Буцефал — один из самых знаменитых коней
+                                        в истории, известный как верный спутник
+                                        Александра Македонского. Этот
+                                        великолепный черный жеребец, обладавший
+                                        выдающейся силой и выносливостью, стал
+                                        символом военной мощи и преданности. Его
+                                        имя переводится как «бычья голова», что
+                                        подчеркивает его величественный вид и
+                                        мощь.
+                                    </p>
+                                    <p>
+                                        Буцефал был не только боевым конем, но и
+                                        настоящим другом Александра. Легенды
+                                        гласят, что он был настолько привязан к
+                                        своему всаднику, что отказывался
+                                        принимать других людей. Вместе они
+                                        прошли через множество сражений, включая
+                                        битвы при Иссе и Гавгамелах, где их союз
+                                        стал ключевым фактором в победах
+                                        Александра. После смерти Буцефала
+                                        Александр основал город в его честь —
+                                        Буцефалию, что свидетельствует о
+                                        глубокой связи между ними.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="users__item accordion__item"
+                                onclick="toggleAccordion(event)"
+                            >
+                                <div class="accordion__heading">
+                                    <div class="users__info">
+                                        <div class="avatar">
+                                            <img
+                                                src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Secretariat_at_stud.jpg/220px-Secretariat_at_stud.jpg"
+                                                alt="Bucephalus"
+                                                class="avatar_inner"
+                                            />
+                                        </div>
+                                        <div>
+                                            <h3>Secretariat</h3>
+                                            <p id="user-age">19</p>
+                                        </div>
+                                    </div>
+                                    <div class="users__expand">
+                                        <img
+                                            src="public/images/icons/arrow_down.svg"
+                                            alt="expand"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="accordion__content">
+                                    <p>
+                                        Конь Секретариат, один из самых
+                                        знаменитых скакунов в истории
+                                        американских скачек, родился 30 марта
+                                        1964 года в штате Виргиния. Он стал
+                                        известен благодаря своим выдающимся
+                                        достижениям на ипподроме, включая победы
+                                        в тройной короне в 1973 году.
+                                        Секретариат был не только быстр, но и
+                                        обладал уникальным стилем бега, который
+                                        привлекал внимание зрителей. Его победа
+                                        на "Кентукки Дерби" была особенно
+                                        впечатляющей: он выиграл с рекордом,
+                                        который оставался непревзойденным в
+                                        течение многих лет.
+                                    </p>
+                                    <p>
+                                        Секретариат отличался великолепной
+                                        физической формой и мощными
+                                        конечностями, что позволяло ему
+                                        развивать невероятную скорость. Его
+                                        тренер, Ларри Мелин, и жокей, Ронnie
+                                        Турк, сыграли ключевую роль в его
+                                        успехах, создавая идеальные условия для
+                                        его тренировок и выступлений. Конь также
+                                        запомнился своей харизмой и характером —
+                                        он был дружелюбным и общительным, что
+                                        делало его любимцем публики.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
