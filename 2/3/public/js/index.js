@@ -20,7 +20,9 @@ function createObserver() {
     }
 
     observer = new IntersectionObserver(handleIntersect, options);
-    observer.observe(adElement);
+    if (!localStorage.getItem("isAdSeen")) {
+        observer.observe(adElement);
+    }
 }
 
 runFullscreenAd = () => {
