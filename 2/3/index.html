@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Самые свежие новости</title>
+        <link rel="stylesheet" href="./public/css/index.css" />
+        <script src="./public/js/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="container">Самые свежие новости</h1>
+        </header>
+        <main>
+            <h2 class="container" style="margin-bottom: 20px; margin-top: 70px">
+                Главное за <span id="currentDay"></span>
+            </h2>
+            <script>
+                let date = new Date().toLocaleDateString("ru-RU");
+                document.querySelector("#currentDay").innerHTML = `${date}`;
+            </script>
+            <div class="main-news__container container">
+                <div class="main-news__spotlight">
+                    <div class="main-news__thumbnail">
+                        <img
+                            src="data:image/webp;base64,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"
+                            alt=""
+                        />
+                    </div>
+                    <div class="main-news__content">
+                        <div class="main-news__info">
+                            <span class="news-info__time"> 9:48 </span>
+                        </div>
+                        <div class="main-news__text">
+                            Произошёл долгожданный релиз GTA: San Andreas
+                        </div>
+                    </div>
+                </div>
+                <div class="main-news__other other__container">
+                    <div class="other__item">
+                        <div class="main-news__content">
+                            <div class="main-news__info">
+                                <span class="main-news-info__time"> 9:30 </span>
+                            </div>
+                            <div class="main-news__text">
+                                Выдыхайте: Банк России оставил ключевую ставку
+                                без изменений.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other__item">
+                        <div class="main-news__content">
+                            <div class="main-news__info">
+                                <span class="main-news-info__time"> 8:14 </span>
+                            </div>
+                            <div class="main-news__text">
+                                Владимир Жириновский заверил, что будет бороться
+                                за пост президента РФ даже после смерти
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news__container container">
+                <h2>Главное за неделю</h2>
+
+                <div class="news__item">
+                    <div class="news__thumbnail">
+                        <div class="ad_observer"></div>
+                        <img
+                            src="./public/images/5233715562448807462.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="news__content">
+                        <div class="news__info">
+                            <span class="news-info__date"> Понедельник </span>
+                            <span class="news-info__time"> 19:37 </span>
+                        </div>
+                        <div class="news__text">
+                            <h3>
+                                На Руси открылась первая школа православного
+                                программирования «Кодило»
+                            </h3>
+                            Православный кодинг работает следующим образом:
+                            программист пишет на бересте специальный код,
+                            состоящий из церковных символов. И если после
+                            завершения написания кода комбинация оказывается
+                            верной, а каллиграфия - выполненной на достойном
+                            уровне, Боги посылают программисту икону. Занятия
+                            проводятся в церкви по седьмицам и осьмицам.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news__item">
+                    <div class="news__thumbnail">
+                        <img
+                            src="./public/images/5247209117037226454.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="news__content">
+                        <div class="news__info">
+                            <span class="news-info__date"> Понедельник </span>
+                            <span class="news-info__time"> 12:43 </span>
+                        </div>
+                        <div class="news__text">
+                            <h3>
+                                «Рост В.В.П в этом году составил 111
+                                сантиметров»
+                            </h3>
+                            На медосмотре в Ленинградской школе №193 успешно
+                            замерили рост первоклассника Вовы Путина
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news__item" id="ad_observer">
+                    <div class="news__thumbnail">
+                        <img
+                            src="./public/images/c846b36f-7f9f-4137-bf58-4e4b4440f951.jfif"
+                            alt=""
+                        />
+                    </div>
+                    <div class="news__content">
+                        <div class="news__info">
+                            <span class="news-info__date"> Понедельник </span>
+                            <span class="news-info__time"> 8:50 </span>
+                        </div>
+                        <div class="news__text">
+                            <h3>Началась двухдневная рабочая неделя</h3>
+                            В связи с празднованием майских праздников на этой
+                            неделе россияне будут работать лишь 2 дня: со 2 по 3
+                            мая. Следующая неделя так же будет короткой -
+                            жителей страны ожидают 3 рабочих дня с понедельника
+                            по среду, после чего 4 выходных подряд.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news__item ad-news">
+                    <div class="news__thumbnail">
+                        <img
+                            src="./public/images/photo_2024-11-06_22-35-09.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="news__content">
+                        <div class="news__info">
+                            <span class="news-info__date"> Реклама </span>
+                        </div>
+                        <div class="news__text">
+                            <h3>Вам пришло +60.000р.</h3>
+                            Проверьте ваше ФИО на выплату из списка победитель
+                            до 14 ноября!
+                            <br />
+                            <button onclick="runFullscreenAd()" class="ad-button">
+                                💰 ПОЛУЧИТЬ 60.000₽
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <dialog id="adDialog">
+            <div class="dialog__container">
+                <video src="./public/video/ad.MP4" id="adVideo" muted></video>
+                <button class="dialog__close-btn" id="adDialogClose">
+                    Закрыть рекламу через <span id="adCounter"></span>
+                </button>
+            </div>
+        </dialog>
+    </body>
+</html>

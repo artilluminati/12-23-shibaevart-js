@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c0c0c;
+    color: #fff;
+}
+
+img {
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3rem;
+}
+.card {
+    display: flex;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+dialog[open]::backdrop {
+    background-color: #000000e8;
+}
+
+.news__container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-news__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-height: 70vh;
+    gap: 30px;
+}
+.main-news__spotlight {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+.main-news__info {
+    display: flex;
+    flex-direction: column;
+}
+.main-news__content {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.main-news__other {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main-news__thumbnail {
+    width: 100%;
+    height: 350px;
+}
+.main-news__thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.main-news-info__time {
+    width: 40px;
+}
+
+.other__item .main-news__content {
+    display: flex;
+    gap: 10px;
+}
+
+.news__thumbnail {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+}
+.news__thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.news__item {
+    display: flex;
+    gap: 20px;
+}
+.news__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.news__text h3 {
+    margin-bottom: 10px;
+}
+.news__info {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+dialog {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #000000;
+}
+.open {
+    display: block;
+}
+.dialog__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+dialog.open {
+    display: flex;
+    align-items: center;
+}
+.dialog__container video {
+    width: 100%;
+    max-height: 100%;
+}
+.dialog__close-btn {
+    border: #000000 1px;
+    background-color: #ffffffc4;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 4rem;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.ad-button {
+    padding: 10px;
+    background-color: red;
+    border: 2px #f32323 solid;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}

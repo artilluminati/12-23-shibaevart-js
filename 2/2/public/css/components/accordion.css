@@ -8,20 +8,31 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow: hidden;
 }
 
 .accordion__content {
-    display: none;
+    display: flex;
     height: 0;
     opacity: 0;
     transition: all 0.3s ease-in;
+    flex-direction: column;
+    gap: 10px;
+    height: 0;
 }
-.accordion__item.open > .accordion__content {
-    display: flex;
+.accordion__container {
+    transition: all 0.3s ease-in;
+    max-height: 0;
+}
+.accordion__container.open .accordion__content {
     opacity: 1;
     height: 100%;
 }
-.accordion__content {
-    flex-direction: column;
-    gap: 10px;
+
+.accordion__heading > div.users__expand {
+    transition: transform 0.05s ease-out;
+}
+
+.accordion__heading.selected > div.users__expand {
+    transform: rotate(180deg);
 }
