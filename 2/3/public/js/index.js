@@ -3,6 +3,7 @@ let closeButton = document.querySelector("#adDialogClose");
 
 function createObserver() {
     let observer;
+    adElement = document.querySelector("#ad_observer");
 
     let options = {
         root: null,
