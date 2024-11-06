@@ -54,24 +54,11 @@ runFullscreenAd = () => {
             clearInterval(adInterval);
         }
     }, 1000);
-    // setTimeout(() => {
-    //     oldButtoninnerHTML = closeButton.innerHTML;
-    //     closeButton.innerHTML = `Закрыть`;
-    //     closeButton.style.cursor = "pointer";
-
-    //     closeButton.addEventListener("click", (event) => {
-    //         adDialog.classList.remove("open");
-    //         document.querySelector("body").style.overflow = "";
-    //         localStorage.setItem("isAdSeen", true);
-    //         closeButton.innerHTML = oldButtoninnerHTML;
-    //     });
-    //     clearInterval(adInterval);
-    // }, timeoutRange * 1000);
 };
 
 window.addEventListener(
     "load",
-    (event) => {
+    () => {
         if (!localStorage.getItem("isAdSeen")) {
             createObserver();
         }
